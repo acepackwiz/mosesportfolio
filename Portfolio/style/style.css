@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #e3e3e3;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+/* Styling the Navigation Bar #ff6347;*/
+.main-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+}
+#logo{
+    color: white;
+    font-size: 25px;
+    right: 80%;
+    left: 30px;
+    position: absolute;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+nav{
+    background:#ff6347ef; 
+    padding: 15px;
+    text-transform: uppercase;
+    transition: background-color 0.5s ease;
+    opacity: 0.8; 
+}
+
+nav ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+
+}
+
+nav ul li{
+ display: flex;
+ justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0,7s ease, color 0.7s ease;
+    padding: 10px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active{
+    border-bottom:solid 3px white;
+}
+/* styling the head */
+
+header {
+    display: flex;
+    justify-content:center;
+    color: white;
+    background-color: #333;
+    padding: 20px;
+    letter-spacing: 1px;   
+    text-align: center;
+}
+
+header h1{
+    margin:0;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    margin-top: 20px;
+}
+
+header p{
+    font-size: 25px;
+    margin-top: 0;
+    font-weight: 300;
+
+}
+.whatapp-icon{
+   position: relative;
+   top: 7px;
+   height: 30px;
+}
+.whatappbutton{ 
+    margin-top: 20px; 
+    background: #25de69;
+    padding:10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: black;
+    text-decoration: none; 
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 20px;
+}
+.whatappbutton::before{
+    content: "";
+    position: absolute;
+    background-color: greenyellow;
+    width: 0 ;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+
+}
+.whatappbutton span{
+    position: relative;
+    z-index: 1;
+}
+
+.whatappbutton:hover::before{
+    width: 300px;
+    height: 300px;
+
+}
+
+.whatappbutton:hover{
+    color: white;
+}
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-selfie{
+    display: flex;
+    width: 150px;
+    margin-top: 70px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Section style */
+
+h2{
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    box-shadow: 2px 6px rgba(0, 0, 0, 0.1) ;
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: bold;
+    text-align: center;
+    text-transform: uppercase;
+
+    
+}
+/*About Section*/
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+}
+.about-illustration{
+    width: 35%; 
+    border-radius: 10px;
+    box-shadow: 0 8px 10px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 15px; 
+    align-self: center;  
+}
+
+
+#about p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin: 15px;
+    padding: 10px;
+    color: black;
+    margin-top: 20px;
+    line-height: 30px
+   
+    
+}
+
+.resume{
+    padding: 15px;
+    margin-left: 20px; 
+    width: 12%;
+    font-size: 18px;
+    background-color:  white;
+    border-radius: 10px;
+    border-color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+.resume::before{
+    content: "";
+    position: absolute;
+    background: #ff6347ef;
+    width: 0 ;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.7s, height 0.7s;
+}
+.resume span{
+    position: relative;
+    z-index: 1;
+}
+.resume:hover{
+    color: white;
+}
+.resume:hover::before{
+    width: 300px;
+    height: 300px;
+}
+/* Project Section*/
+
+#project {
+    background-color:#e3e3e3;
+    text-align:center;
+    margin-bottom: 90px;
+    display: flex;
+
+}
+.project-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:#333;
+    padding: 15px;
+    margin: 25px;
+    text-align: center;
+    height: 40vh;
+    flex: 1;
+    align-content: center;
+    flex-wrap: wrap;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);;
+}
+
+.project-card h3 {
+    font-size: 25px;
+    align-self: flex-start;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.project-card p{
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.project-card a {
+    display: inline-block;
+    margin: 5px;
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.project-card a:hover {
+    color:#fff
+}
+/* contact section*/
+
+#contact{
+    display: flex;
+}
+.contact-card{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #25de69;
+    font-size: 20px;
+    width: 100%;
+    height: max-content;
+    border-radius: 10px;
+    margin: 15px;
+    flex: 1;
+
+}
+.contact-card li{
+    padding: 5px;   
+    list-style: none;
+}
+.form{    
+ padding: 5px;
+ margin: 10px;
+
+
+}
+.contact-card h4{
+    align-self: center;
+}
+
+#full-name{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+footer{
+    background-color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    width:100%;
+    bottom: 0;
+}
